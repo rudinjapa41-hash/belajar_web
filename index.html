@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Biodata Saya</title>
+    <!-- Menyambungkan HTML dengan file gaya/desain CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigasi Halaman -->
+    <nav class="navbar">
+        <a href="index.html">Beranda</a>
+        <a href="*">HALAMAN</a>
+        <a href="tentang.html">Tentang Saya</a>
+    </nav>
+
+    <h1>Halo Dunia!</h1>
+
+    <!-- Area Konten Utama -->
+    <div class="konten-utama">
+        
+        <!-- Kartu Biodata Budi -->
+        <div class="kartu">
+            <!-- Tag foto profil -->
+            <img src="foto.png" alt="Foto Profil Saya" class="foto-profil">
+            
+            <h1>Halo, Saya Aru!</h1>
+            <p class="pekerjaan">Pelajar & Calon Web Developer</p>
+            <hr>
+            <p>Saya sedang belajar membuat website pertama saya menggunakan VS Code. Menyenangkan sekali!</p>
+            <a href="https://wa.me" target="_blank" class="tombol">Hubungi Saya</a>
+        </div>
+
+        <!-- Tombol Interaktif JavaScript -->
+        <div class="aksi-tombol">
+            <button id="tombolKlik">Klik Saya!</button>
+        </div>
+
+    </div>
+
+    <!-- Menulis Kode JavaScript -->
+    <script>
+        // Mengambil elemen tombol berdasarkan ID
+        const tombol = document.getElementById('tombolKlik');
+        
+        // Memberikan aksi ketika tombol diklik
+        tombol.addEventListener('click', function() {
+            alert('Halo! Terima kasih sudah mengklik tombol ini. Kamu hebat!');
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+/* ==========================================
+   1. ATURAN GLOBAL & HALAMAN (BODY)
+   ========================================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* ==========================================
+   2. NAVIGASI BAR (NAVBAR)
+   ========================================== */
+.navbar {
+    display: flex;                  /* Mengaktifkan mode Flexbox */
+    justify-content: center;        /* Mengubah dari space-around menjadi center agar menu kumpul di tengah */
+    gap: 30px;                      /* Menentukan jarak yang pas antara Beranda dan Tentang Saya (30 piksel) */
+    background-color: #333;         /* Latar belakang hitam/gelap */
+    padding: 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;          /* Menghilangkan garis bawah pada link */
+    font-weight: bold;
+}
+
+.navbar a:hover {
+    color: #2ec4b6;                 /* Berubah warna menjadi hijau mint saat diarahkan kursor */
+}
+
+/* ==========================================
+   3. TATA LETAK UTAMA (KONTEN)
+   ========================================== */
+.konten-utama {
+    display: flex;
+    flex-direction: column;         /* Menyusun kartu dan tombol berurutan ke bawah */
+    align-items: center;            /* Membuat konten berada tepat di tengah secara horizontal */
+    justify-content: center;
+    min-height: 80vh;               /* Memberi ruang vertikal agar konten berada di tengah halaman */
+    padding: 20px;
+    gap: 20px;                      /* Jarak antara kartu biodata dengan tombol di bawahnya */
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+p {
+    color: #333333;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+/* ==========================================
+   4. KARTU BIODATA & FOTO PROFIL
+   ========================================== */
+.kartu {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 350px;
+    width: 100%;
+}
+
+.pekerjaan {
+    color: #2ec4b6;                 /* Warna Hijau mint sesuai pilihan Anda */
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.foto-profil {
+    width: 120px;                   /* Lebar foto */
+    height: 120px;                  /* Tinggi foto */
+    border-radius: 50%;             /* Mengaktifkan kembali agar foto bulat sempurna */
+    object-fit: cover;              /* Memastikan foto tidak gepeng/terdistorsi */
+    border: 3px solid #2ec4b6;      /* Garis tepi hijau mint */
+    margin-bottom: 15px;            /* Memberikan jarak antara foto dan nama */
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #e0e0e0;
+    margin: 15px 0;
+}
+
+/* ==========================================
+   5. GAYA TOMBOL (WHATSAPP & KLIK SAYA)
+   ========================================== */
+/* Tombol Hubungi Saya (WhatsApp) berbentuk Link */
+.tombol {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #2ec4b6;     /* Hijau mint */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.tombol:hover {
+    background-color: #209f93;     /* Hijau lebih gelap saat disentuh */
+}
+
+/* Tombol Klik Saya (Interaktif JavaScript) */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #1a73e8;     /* Warna biru agar kontras dengan tombol WA */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #155cb4;     /* Biru lebih gelap saat disentuh */
+}
+
+/* ==========================================
+   6. ATURAN RESPONSIVE (UNTUK LAYAR HP)
+   ========================================== */
+
+/* @media artinya aturan ini HANYA berjalan jika lebar layar maksimal 576px (ukuran umum HP) */
+@media (max-width: 576px) {
+    
+    /* 1. Mengubah arah susunan konten utama */
+    .konten-utama {
+        flex-direction: column;    /* Memastikan elemen tetap berurutan ke bawah */
+        min-height: auto;          /* Melepaskan tinggi kaku agar halaman bisa di-scroll dengan pas */
+        padding: 10px;             /* Memperkecil jarak tepi agar hemat ruang di layar HP */
+        margin-top: 20px;          /* Mengurangi jarak atas agar tidak terlalu kosong */
+    }
+
+    /* 2. Menyesuaikan ukuran kotak biodata */
+    .kartu {
+        padding: 20px;             /* Mengurangi padding dalam kotak agar teks tidak terlalu sempit */
+        max-width: 90%;            /* Kotak akan melebar fleksibel mengikuti 90% dari lebar layar HP */
+    }
+
+    /* 3. Memperkecil ukuran foto profil */
+    .foto-profil {
+        width: 100px;              /* Mengecilkan lebar foto dari 120px menjadi 100px */
+        height: 100px;             /* Mengecilkan tinggi foto */
+    }
+
+    /* 4. Memperkecil ukuran font agar tidak kebesaran di HP */
+    h1 {
+        font-size: 24px;           /* Mengurangi ukuran judul */
+    }
+
+    p {
+        font-size: 14px;           /* Mengurangi ukuran teks paragraf */
+    }
+}
+
